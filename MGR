@@ -1,0 +1,42 @@
+
+
+using System;
+class HelloWorld {
+  static void Main() {
+    Console.WriteLine("Сенатор: Ну что Джек! Я скажу слово на букву н");
+    Console.WriteLine ();
+    Console.WriteLine("Джек: Что же это за слово?");
+    bool f = false;
+    for (int i = 0; i < 1;) {
+    string x = Console.ReadLine();
+    switch (x){
+        
+        case "начос":
+        Console.WriteLine("Обожаю начос! Но ты не угадал, давай ещё раз");
+        break;
+        
+        case "наномашины":
+        Console.WriteLine("Да!!! Наномашины, сынок");
+        f = true;
+        break;
+        
+        
+        default:
+        Console.WriteLine("ЧТО??? Нет, попробуй ещё раз");
+        break;
+        
+        
+        
+    }
+    if (f == false) {
+    continue;
+}
+else {
+    break;
+}
+     
+    
+}
+
+}
+}
