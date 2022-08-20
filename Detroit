@@ -1,0 +1,45 @@
+using System;
+class HelloWorld {
+  static void Main() {
+    string a = "Konnor";
+    int value = 0;
+    Console.WriteLine($"{a} : Can i get nervous for the android?");
+    Console.WriteLine("A : No" + Environment.NewLine + "B : Yes" + Environment.NewLine + "C : I don't know" + Environment.NewLine + "D : Stop think about this question");
+    string x = Console.ReadLine();
+    switch (x) {
+        case "A":
+        Console.WriteLine("Software failure ▼");
+        value -= 1;
+        break;
+        
+        case "B":
+        Console.WriteLine("Software failure ▲");
+        value += 1;
+        break;
+        
+        case "C":
+        Console.WriteLine("Software failure ▲");
+        value += 1;
+        break;
+        
+        case "D":
+        Console.WriteLine("Software failure ▼");
+        value -= 1;
+        break;
+        
+        default:
+        Console.WriteLine("Program error");
+        value -= 99999999;
+        break;
+    }
+    if (value == -1) {
+        Console.WriteLine("System is OK");
+    }
+    else if (value == 1) {
+        Console.WriteLine("Am I deviant? Hm...");
+    }
+    else if (value == -99999999) {
+        Console.WriteLine("?????????");
+    }
+  }
+}
