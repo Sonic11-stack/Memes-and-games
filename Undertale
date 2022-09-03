@@ -1,0 +1,58 @@
+using System;
+
+Console.WriteLine("You are meeting Sans");
+Console.ReadLine();
+Console.WriteLine("Sans: Hey kiddo! Do you want to play my game?");
+Console.ReadLine();
+Console.WriteLine("1: Yes" + Environment.NewLine + "2: No");
+string v = Console.ReadLine();
+if (v == "Yes")
+{
+    Console.WriteLine("Sans: Ok, let's talk with you about game");
+    Solution f = Solution.Yes;
+}
+else if (v == "No")
+{
+    Console.WriteLine("Sans: Welp, see ya later, kiddo!");
+    Solution f = Solution.No;
+    return;
+}
+else
+{
+    Console.WriteLine("?????");
+    return;
+}
+Console.WriteLine("Sans: Look, I have a balloon and 3 glasses, I will hide it in one of the glasses. " +
+    "You have to guess where I hid it. Well... Now we can start! Don't look");
+Console.ReadLine();
+Console.WriteLine("He hiding a balloon");
+Console.ReadLine();
+Console.WriteLine("Sans: Welp, now guess");
+Console.ReadLine();
+Console.WriteLine("first" + Environment.NewLine + "second" + Environment.NewLine + "third");
+Random random = new Random();
+int animalName = random.Next(0, 2);
+Do choice = (Do)animalName;
+string h = Console.ReadLine();
+if (h == "first" && choice == Do.first || h == "second" && choice == Do.second || h == "third" && choice == Do.second)
+{
+    Console.WriteLine("Sans: Yep, you guessed right");
+    return;
+}
+else
+{
+    Console.WriteLine("Sans: Oh no, you not guessed right");
+    return;
+}
+
+enum Solution
+{
+    Yes,
+    No
+}
+enum Do
+{
+    first,
+    second,
+    third
+}
